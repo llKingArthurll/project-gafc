@@ -1,0 +1,16 @@
+<form [formGroup]="formAgregar" (ngSubmit)="agregarSolicitud()">
+    <div class="d-flex justify-content-center mt-2">
+        <div class="card border-primary mb-3" style="width: 40rem;">
+            <h4 class="card-header text-center">Agrega tu solicitud</h4>
+            <div class="card-body">
+                <input formControlName="fechaActual" type="text" class="form-control mb-3" placeholder="Ingresa fecha" [(ngModel)]="fechaActual">
+                <input formControlName="codSolicitud" type="number" class="form-control mb-3" placeholder="Ingresa código de solicitud">
+                <input formControlName="detalleSolicitud" type="text" class="form-control mb-3" placeholder="Ingresa el detalle de su solicitud">
+                <div class="d-flex justify-content-center">
+                    <button [disabled]="formAgregar.invalid" type="submit" class="btn btn-primary me-3">Aceptar</button>
+                    <button routerLink="/" type="button" class="btn btn-secondary">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
